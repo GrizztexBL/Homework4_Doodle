@@ -9,7 +9,6 @@ public class View extends BorderPane {
 
     Stage stage;
     Rectangle doodle;
-    double sceneWidth = 600, sceneHeight = 1000;
 
     public View(Stage stage) {
         this.stage = stage;
@@ -17,8 +16,8 @@ public class View extends BorderPane {
     }
 
     public void displaySetup() {
-        doodle = new Rectangle(40, 60);
-        doodle.setFill(Color.GREEN);
+        doodle = new Rectangle(DoodleJumpConstants.SCENE_WIDTH/2, DoodleJumpConstants.SCENE_HEIGHT/2, DoodleJumpConstants.DOODLE_WIDTH, DoodleJumpConstants.DOODLE_HEIGHT);
+        doodle.setFill(Color.YELLOW);
         getChildren().add(doodle);
 
         Button quit = new Button("Quit");
@@ -30,12 +29,17 @@ public class View extends BorderPane {
 
         setBottom(quit);
 
-        Scene scene = new Scene(this, 600, 400);
+        Scene scene = new Scene(this, DoodleJumpConstants.SCENE_WIDTH, DoodleJumpConstants.SCENE_HEIGHT);
         stage.setScene(scene);
         stage.setResizable(false);
     }
 
     public void show() {
         stage.show();
+    }
+
+    public void setDoodlePosition(double x, double y){
+        doodle.setX(x);
+        doodle.setY(y);
     }
 }
