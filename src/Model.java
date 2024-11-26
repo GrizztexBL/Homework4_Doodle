@@ -41,4 +41,12 @@ public class Model {
     public double getCurrentVelocity() {
         return currentVelocity;
     }
+
+    public boolean isAtLimit() {
+        if (doodleY >= 0) { 
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

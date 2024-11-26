@@ -1,5 +1,8 @@
+import java.util.Random;
+
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -9,6 +12,7 @@ public class View extends BorderPane {
 
     Stage stage;
     Rectangle doodle;
+    Random rand = new Random();
 
     public View(Stage stage) {
         this.stage = stage;
@@ -42,4 +46,9 @@ public class View extends BorderPane {
         doodle.setX(x);
         doodle.setY(y);
     }
+
+    public BorderPane getPane() {
+        return this;
+    }
+
 }
