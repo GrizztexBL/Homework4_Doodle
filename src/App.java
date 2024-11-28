@@ -9,7 +9,7 @@ public class App extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         View myGameView = new View(primaryStage);
-        Model model = new Model(DoodleJumpConstants.SCENE_WIDTH/2, DoodleJumpConstants.SCENE_HEIGHT/2);
+        Model model = new Model(DoodleJumpConstants.SCENE_WIDTH/2, 700);
         Controller controller = new Controller(model, myGameView);
         myGameView.show();
     }

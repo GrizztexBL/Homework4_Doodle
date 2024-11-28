@@ -1,8 +1,6 @@
 import java.util.Random;
-
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -20,7 +18,7 @@ public class View extends BorderPane {
     }
 
     public void displaySetup() {
-        doodle = new Rectangle(DoodleJumpConstants.SCENE_WIDTH/2, DoodleJumpConstants.SCENE_HEIGHT/2, DoodleJumpConstants.DOODLE_WIDTH, DoodleJumpConstants.DOODLE_HEIGHT);
+        doodle = new Rectangle(DoodleJumpConstants.SCENE_WIDTH/2, 700, DoodleJumpConstants.DOODLE_WIDTH, DoodleJumpConstants.DOODLE_HEIGHT);
         doodle.setFill(Color.YELLOW);
         getChildren().add(doodle);
 
@@ -49,6 +47,10 @@ public class View extends BorderPane {
 
     public BorderPane getPane() {
         return this;
+    }
+
+    public Rectangle getDoodle() {
+        return doodle;
     }
 
 }
