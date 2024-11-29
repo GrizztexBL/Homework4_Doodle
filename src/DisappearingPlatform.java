@@ -7,4 +7,10 @@ public class DisappearingPlatform extends Platform {
         this.setFill(Color.RED);
     }
 
+    @Override
+    public void jump() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'jump'");
+    }
+
 }

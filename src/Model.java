@@ -49,4 +49,8 @@ public class Model {
             return false;
         }
     }
+
+    public void setDoodleY(int y){
+        doodleY = y;
+    }
 }

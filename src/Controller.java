@@ -49,6 +49,20 @@ public class Controller {
 
     public void updateDoodle(){
         model.moveDoodle();
+        if(model.getDoodleY() < DoodleJumpConstants.SCENE_HEIGHT / 2){
+            int distance = (DoodleJumpConstants.SCENE_HEIGHT / 2) - (int)model.getDoodleY();
+            model.setDoodleY(DoodleJumpConstants.SCENE_HEIGHT / 2);
+            movePlatforms(distance);
+            if(currentBottomPlatform.getY() > DoodleJumpConstants.SCENE_HEIGHT){
+                platforms.remove(currentBottomPlatform);
+                view.getChildren().remove(currentBottomPlatform);
+                currentBottomPlatform = platforms.get(0);
+                Platform tempPlatform = getNextPlatform();
+                platforms.add(tempPlatform);
+                view.getChildren().add(tempPlatform);
+                currentTopPlatform = tempPlatform;
+            }
+        }
         view.setDoodlePosition(model.getDoodleX(), model.getDoodleY());
     }
 
@@ -101,6 +115,12 @@ public class Controller {
         int min = (int)currentTopPlatform.getY() - 20;
         int max = (int)currentTopPlatform.getY() - 100;
         return rand.nextInt(max, min);
+    }
+
+    public void movePlatforms(int distance){
+        for(Platform p : platforms){
+            p.setY(p.getY() + distance);
+        }
     }
 
 }   

@@ -7,4 +7,10 @@ public class BouncyPlatform extends Platform {
         this.setFill(Color.GREEN);
     }
 
+    @Override
+    public void jump() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'jump'");
+    }
+
 }

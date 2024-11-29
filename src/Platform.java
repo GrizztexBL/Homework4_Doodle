@@ -9,4 +9,6 @@ public abstract class Platform extends Rectangle{
         this.speed = 1;
     }
 
+    public abstract void jump();
+
 }

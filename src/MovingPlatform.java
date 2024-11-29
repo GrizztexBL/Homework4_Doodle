@@ -7,4 +7,10 @@ public class MovingPlatform extends Platform {
         this.setFill(Color.BLUE);
     }
 
+    @Override
+    public void jump() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'jump'");
+    }
+
 }

@@ -7,4 +7,10 @@ public class RegularPlatform extends Platform {
         this.setFill(Color.BLACK);
     }
 
+    @Override
+    public void jump() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'jump'");
+    }
+
 }
