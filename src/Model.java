@@ -42,15 +42,11 @@ public class Model {
         return currentVelocity;
     }
 
-    public boolean isAtLimit() {
-        if (doodleY >= 0) { 
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public void setDoodleY(int y){
         doodleY = y;
+    }
+
+    public void setCurrentVelocity(double currentVelocity){
+        this.currentVelocity = currentVelocity;
     }
 }

@@ -2,15 +2,14 @@ import javafx.scene.paint.Color;
 
 public class BouncyPlatform extends Platform {
     
-    public BouncyPlatform() {
-        super();
+    public BouncyPlatform(Model model) {
+        super(model);
         this.setFill(Color.GREEN);
     }
 
     @Override
     public void jump() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'jump'");
+        model.setCurrentVelocity(DoodleJumpConstants.REBOUND_VELOCITY * 1.5);
     }
 
 }

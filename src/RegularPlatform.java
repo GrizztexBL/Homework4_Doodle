@@ -2,15 +2,14 @@ import javafx.scene.paint.Color;
 
 public class RegularPlatform extends Platform {
     
-    public RegularPlatform() {
-        super();
+    public RegularPlatform(Model model) {
+        super(model);
         this.setFill(Color.BLACK);
     }
 
     @Override
     public void jump() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'jump'");
+        model.setCurrentVelocity(DoodleJumpConstants.REBOUND_VELOCITY);
     }
 
 }

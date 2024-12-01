@@ -1,12 +1,11 @@
 import javafx.scene.shape.Rectangle;
 
 public abstract class Platform extends Rectangle{
-    double speed;
-    double xLocation, yLocation;
+    Model model;
 
-    public Platform() {
+    public Platform(Model model) {
         super(DoodleJumpConstants.PLAT_WIDTH, DoodleJumpConstants.PLAT_HEIGHT);
-        this.speed = 1;
+        this.model = model;
     }
 
     public abstract void jump();
