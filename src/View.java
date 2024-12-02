@@ -46,7 +46,7 @@ public class View extends BorderPane {
 
         bottom.getChildren().add(quit);
 
-        bottom.setAlignment(Pos.CENTER);
+        //bottom.setAlignment(Pos.CENTER);
 
         setBottom(bottom);
 

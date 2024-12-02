@@ -6,11 +6,9 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.HBox;
 import javafx.util.Duration;
 
 public class Controller {
@@ -132,7 +130,7 @@ public class Controller {
 
     private double getNextPlatformY() {
         int min = (int)currentTopPlatform.getY() - 50;
-        int max = (int)currentTopPlatform.getY() - 200;
+        int max = (int)currentTopPlatform.getY() - 175;
         return rand.nextInt(max, min);
     }
 
@@ -146,7 +144,7 @@ public class Controller {
         Iterator<Platform> iter = platforms.iterator();
         while(iter.hasNext()){
             Platform p = iter.next();
-            if (view.getDoodle().intersects(p.getBoundsInLocal())){
+            if (p.intersects(model.getDoodleX(), model.getDoodleY() + DoodleJumpConstants.DOODLE_HEIGHT, DoodleJumpConstants.DOODLE_WIDTH, 0)){
                 p.jump();
             }
         }
