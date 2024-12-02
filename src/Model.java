@@ -26,10 +26,6 @@ public class Model {
         }
     }
 
-    public void jumpDoodle(){
-        currentVelocity = DoodleJumpConstants.REBOUND_VELOCITY;
-    }
-
     public double getDoodleX() {
         return doodleX;
     }
