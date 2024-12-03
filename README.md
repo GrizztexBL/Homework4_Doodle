@@ -9,5 +9,8 @@ We chose to use a Model-View-Controller design where the View class handles the 
 The game runs as intended, there are no bugs that we know of.
 
 # High Scores
-Brandon: 66
+Brandon: 66 \
 Morgan: 79
+
+# Feedback
+It took us a total of about 8-10 hours of sitting down and working on the homework to complete it. I think you gave us just the right amount of time for what was asked to be completed.
