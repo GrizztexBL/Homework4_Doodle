@@ -7,3 +7,7 @@ We chose to use a Model-View-Controller design where the View class handles the 
 
 # Known Bugs
 The game runs as intended, there are no bugs that we know of.
+
+# High Scores
+Brandon: 66
+Morgan: 79
